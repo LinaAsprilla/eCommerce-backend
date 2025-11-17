@@ -1,6 +1,6 @@
 import { Injectable, Inject } from "@nestjs/common";
 import { ProductRepositoryPort } from "../ports/product-repository.port";
-import { Result } from "../../../../shared/result";
+import { Result } from "@/shared/result";
 import { Product } from "../../domain/product.entity";
 
 @Injectable()
