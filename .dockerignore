@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+dist/
+
+# Secrets
+.env
+.env.local
+secrets/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Testing
+coverage/
+
+# Build
+*.tsbuildinfo
