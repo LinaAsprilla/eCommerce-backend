@@ -15,8 +15,9 @@
 </div>
 
 ---
-
 ## 📋 Descripción General
+
+🌐 **Backend Desplegado:** [https://ecommerce-backend-5hr3.onrender.com/api/v1](https://ecommerce-backend-5hr3.onrender.com)
 
 E-Commerce Backend es una API REST robusta y segura construida con **NestJS**, que implementa patrones de arquitectura moderna y cumple con los estándares de seguridad OWASP Top 10 2021.
 
