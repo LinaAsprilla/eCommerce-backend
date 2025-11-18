@@ -2,9 +2,11 @@ import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { ConfigModule } from "@nestjs/config";
 import { ThrottlerModule, ThrottlerGuard } from "@nestjs/throttler";
+import { ScheduleModule } from "@nestjs/schedule";
 import { APP_GUARD } from "@nestjs/core";
 import { ProductsModule } from "./modules/products/products.module";
 import { TransactionsModule } from "./modules/transactions/transactions.module";
+import { KeepAliveModule } from "./modules/keep-alive/keep-alive.module";
 
 @Module({
   imports: [
@@ -12,6 +14,7 @@ import { TransactionsModule } from "./modules/transactions/transactions.module";
       isGlobal: true,
       envFilePath: ".env",
     }),
+    ScheduleModule.forRoot(),
     // Rate Limiting (OWASP A04:2021 - Insecure Design)
     ThrottlerModule.forRoot([{
       ttl: 60000,
@@ -30,7 +33,8 @@ import { TransactionsModule } from "./modules/transactions/transactions.module";
       logging: process.env.NODE_ENV === "development",
     }),
     ProductsModule,
-    TransactionsModule
+    TransactionsModule,
+    KeepAliveModule,
   ],
   providers: [
     {
