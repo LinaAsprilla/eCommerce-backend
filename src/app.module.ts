@@ -4,6 +4,7 @@ import { ConfigModule } from "@nestjs/config";
 import { ThrottlerModule, ThrottlerGuard } from "@nestjs/throttler";
 import { APP_GUARD } from "@nestjs/core";
 import { ProductsModule } from "./modules/products/products.module";
+import { TransactionsModule } from "./modules/transactions/transactions.module";
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { ProductsModule } from "./modules/products/products.module";
       logging: process.env.NODE_ENV === "development",
     }),
     ProductsModule,
+    TransactionsModule
   ],
   providers: [
     {
