@@ -55,9 +55,9 @@ services:
       DATABASE_PASS: ${DATABASE_PASS:-postgres}
       DATABASE_NAME: ${DATABASE_NAME:-ecommerce}
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:3000}
-      WOMPI_BASE_URL: ${WOMPI_BASE_URL}
-      WOMPI_PRIVATE_KEY: ${WOMPI_PRIVATE_KEY}
-      WOMPI_PUBLIC_KEY: ${WOMPI_PUBLIC_KEY}
+      PIWOM_BASE_URL: ${PIWOM_BASE_URL}
+      PIWOM_PRIVATE_KEY: ${PIWOM_PRIVATE_KEY}
+      PIWOM_PUBLIC_KEY: ${PIWOM_PUBLIC_KEY}
     networks:
       - ecommerce_network
     depends_on:
